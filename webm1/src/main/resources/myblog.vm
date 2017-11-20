@@ -1,0 +1,107 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../result.css">
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = innerWidth / 10 + "px";
+        window.onresize = function() {
+            document.documentElement.style.fontSize = innerWidth / 10 + "px";
+        }
+    </script>
+</head>
+<body>
+<div class="main">
+    <div class="mainBox">
+        <div class="header">
+            <span class="logo"></span>
+            <span class="logoImg"></span>
+        </div>
+
+        <div class="centerTop">
+            <table>
+                <tr>
+                    <th colspan="5">学生信息</th>
+                </tr>
+                <tr>
+                    <td>学生姓名</td>
+                    <td>老师姓名</td>
+                    <td>年级</td>
+                    <td>课程</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="$!{englishName}" style="text-align: center"></td>
+                    <td><input type="text" value="$!{teacherName}" style="text-align: center"></td>
+                    <td><input type="text" value="" style="text-align: center"></td>
+                    <td>
+                        <input type="text" value="$!{courseType}" style="text-align: center">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="appraisalTab">
+            <table>
+                <from>
+                    <tr>
+                        <th style="width: 10%;">类型</th>
+                        <th colspan="2">英语口语等级评审</th>
+                    </tr>
+
+                    <tr>
+                        <td>发音</td>
+                        <td  style="width: 10%;"><b>$!{pronunciationScore}</b>分</td>
+                        <td><span>$!{pronunciationRemark}</span></td>
+                    </tr>
+                    <tr>
+                        <td>词汇</td>
+                        <td><b>$!{vocabularyScore}</b>分</td>
+                        <td><span>$!{vocabularyRemark}</span></tr>
+                    </tr>
+                    <tr>
+                        <td>语法</td>
+                        <td  style="width: 10%;"><b>$!{grammarScore}</b>分</td>
+                        <td><span>$!{grammarRemark}</span></td>
+                    </tr>
+                    <tr>
+                        <td>流利度</td>
+                        <td><b>$!{fluencyScore}</b>分</td>
+                        <td><span>$!{fluencyRemark}</span></tr>
+                    </tr>
+                    <tr>
+                        <td>听力理解</td>
+                        <td  style="width: 10%;"><b>$!{listeningScore}</b>分</td>
+                        <td><span>$!{listeningRemark}</span></td>
+                    </tr>
+
+                </from>
+            </table>
+        </div>
+
+        <div class="footer">
+            <table>
+                <tr>
+                    <th>口语评测得分</th>
+                </tr>
+                <tr>
+                    <td>此次评测的得分是<p> $!{totalScore}</p>分</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footerDiv">
+            <div class="footerInput">
+##                签名：<input type="text" name="">
+##                日期：<input type="text" name="">
+            </div>
+            <dl>
+                <dt>咨询电话：</dt>
+                <dd>400-661-9888 talk.abc.com.cn</dd>
+            </dl>
+            <img src="../img/seal.png" class="seal">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
